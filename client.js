@@ -5,10 +5,9 @@ const mainView = require('./views/main')
 const app = choo()
 
 app.model({
-  namespace: 'message',
+  namespace: 'ethereum',
   state: {
-    server: 'rehydration has kicked in, server data was tossed',
-    client: 'hello client!'
+    data: {}
   }
 })
 
