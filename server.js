@@ -3,6 +3,7 @@ const hyperstream = require('hyperstream')
 const browserify = require('browserify')
 const bankai = require('bankai')
 const http = require('http')
+const coinr = require('coinr')
 
 const PORT = 8080
 const client = require('./client')
@@ -37,9 +38,11 @@ const createIndex = bankai.html({ favicon: false, css: false })
 function handleHtml (req, res) {
   res.setHeader('Content-Type', 'text/html; charset=utf-8')
 
-  const state = { message: { server: 'hello server!' } }
-  const inner = client.toString(req.url, state)
-  const hs = hyperstream({ 'body': { _appendHtml: inner } })
+  coinr('ethereum').then(d => {
+    const state = { message: { server: `\$${d.price_usd}` } }
+    const inner = client.toString(req.url, state)
+    const hs = hyperstream({ 'body': { _appendHtml: inner } })
 
-  createIndex(req, res).pipe(hs).pipe(res)
+    createIndex(req, res).pipe(hs).pipe(res)
+  })
 }
