@@ -1,6 +1,9 @@
 # coin [![Build Status](https://secure.travis-ci.org/johnotander/coin.png?branch=master)](https://travis-ci.org/johnotander/coin) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
+__Work in progress__
+
 Pretty web app to display the latest cryptocurrency values
+(I wanted to play with 🚂🚋🚋🚋[choo](https://github.com/yoshuawuyts/choo)).
 
 ## Installation
 
