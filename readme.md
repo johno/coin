@@ -1,4 +1,4 @@
-# coin [![Build Status](https://secure.travis-ci.org/johnotander/coin.png?branch=master)](https://travis-ci.org/johnotander/coin) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# coin
 
 __Work in progress__
 
@@ -8,15 +8,13 @@ Pretty web app to display the latest cryptocurrency values
 ## Installation
 
 ```bash
-npm install --save coin
+git clone https://github.com/johnotander/coin && cd $_
 ```
 
 ## Usage
 
 ```javascript
-var coin = require('coin')
-
-coin()  // => true
+npm i && npm start
 ```
 
 ## License
