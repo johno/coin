@@ -11,7 +11,7 @@ app.model({
   }
 })
 
-app.router((route) => [
+app.router(route => [
   route('/', mainView)
 ])
 
