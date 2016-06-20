@@ -25,7 +25,7 @@ module.exports = function (params, state, send) {
 
           <div class="ba b--light-gray br2 cf center">
             <div class="fl w-50 br b--light-gray">
-              <div class="pa3">
+              <div class="pa4">
                 <h4 class="mt0 mb0">\$${vol}</h4>
                 <span class="f6 light-silver tracked ttu mt0">
                   24hr volume
@@ -33,7 +33,7 @@ module.exports = function (params, state, send) {
               </div>
             </div>
             <div class="fl w-50">
-              <div class="pa3">
+              <div class="pa4">
                 <h4 class="mt0 mb0">\$${cap}</h4>
                 <span class="f6 light-silver tracked ttu mt0">
                   Market Cap
