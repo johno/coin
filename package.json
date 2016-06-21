@@ -20,6 +20,8 @@
     "choo": "^2.2.2",
     "coinr": "johnotander/coinr",
     "humanize-plus": "^1.8.2",
+    "is-blank": "^1.1.0",
+    "is-present": "^1.0.0",
     "minitachyons": "^0.1.1",
     "server-router": "^2.1.0",
     "tachyons": "^4.0.0-beta.33"

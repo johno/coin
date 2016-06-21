@@ -1,6 +1,7 @@
 const assert = require('assert')
 const choo = require('choo')
 const Humanize = require('humanize-plus')
+const isPresent = require('is-present')
 
 module.exports = function (params, state, send) {
   const currencies = state.currencies.data
@@ -9,6 +10,7 @@ module.exports = function (params, state, send) {
 
   return choo.view`
     <section id="app-root">
+      <button onclick=${(e) => send('currencies:list')}>OK!</button>
       <link rel="stylesheet" href="https://npmcdn.com/minitachyons@0.1.10/css/minitachyons.css">
       ${currencies.map(currency => {
         return choo.view`

@@ -5,12 +5,7 @@ const currencyView = require('./views/currency')
 
 const app = choo()
 
-app.model({
-  namespace: 'currencies',
-  state: {
-    data: {}
-  }
-})
+app.model(require('./models/currencies'))
 
 app.router(route => [
   route('/', mainView),
