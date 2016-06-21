@@ -38,9 +38,9 @@ const createIndex = bankai.html({ favicon: false, css: false })
 function handleHtml (req, res) {
   res.setHeader('Content-Type', 'text/html; charset=utf-8')
 
-  coinr('ethereum')
+  coinr()
     .then(data => {
-      const state = { ethereum: { data: data } }
+      const state = { currencies: { data: data.slice(0,15) } }
       const inner = client.toString(req.url, state)
       const hs = hyperstream({ 'body': { _appendHtml: inner } })
 

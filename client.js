@@ -1,18 +1,20 @@
 const choo = require('choo')
 
 const mainView = require('./views/main')
+const currencyView = require('./views/currency')
 
 const app = choo()
 
 app.model({
-  namespace: 'ethereum',
+  namespace: 'currencies',
   state: {
     data: {}
   }
 })
 
 app.router(route => [
-  route('/', mainView)
+  route('/', mainView),
+  route('/currency/:symbol', currencyView)
 ])
 
 if (module.parent) {
