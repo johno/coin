@@ -9,7 +9,7 @@ module.exports = function (params, state, send) {
 
   return choo.view`
     <section id="app-root">
-      <link rel="stylesheet" href="https://npmcdn.com/minitachyons@0.1.10/css/minitachyons.css">
+      <link rel="stylesheet" href="https://unpkg.com/minitachyons@0.1.10/css/minitachyons.css">
       ${currencies.map(currency => {
         return choo.view`
           <div class="cf pa4 bb blg">
